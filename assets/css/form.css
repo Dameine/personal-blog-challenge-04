@@ -1,0 +1,28 @@
+h3 {
+    position: relative;
+    top:35%;
+    text-align: center;
+}
+
+form {
+    position: relative;
+    top: 35%;
+    padding-left: 50px;
+}
+
+#userName {
+    width: 90%;
+}
+
+#title {
+    width: 90%;
+}
+
+#content {
+    width: 90%;
+    height: 125px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+    line-height: normal;
+}
