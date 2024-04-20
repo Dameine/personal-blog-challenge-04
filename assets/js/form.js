@@ -3,6 +3,9 @@ const titleInput = document.querySelector("#title");
 const contentInput = document.querySelector("#content");
 const submitBtn = document.querySelector("#submitBtn");
 
+// Load existing blog posts from local storage
+const existingBlogPosts = JSON.parse(localStorage.getItem("blogPost")) || [];
+
 //Submit button
 submitBtn.addEventListener("click", function(e) {
     e.preventDefault();
@@ -24,10 +27,10 @@ submitBtn.addEventListener("click", function(e) {
     } else {
 
         //Stringify blogPost variable
-        const blogPostJSON = JSON.stringify(blogPost);
+        existingBlogPosts.push(blogPost);
 
-        //store blogPost input
-        localStorage.setItem("blogPost", blogPostJSON);
+        //store array
+        localStorage.setItem("blogPost", JSON.stringify(existingBlogPosts));
 
         //page changes from index.html to blog.html
         window.location.href = "blog.html";
