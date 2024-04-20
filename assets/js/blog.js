@@ -1,7 +1,7 @@
 const blogPost = document.querySelector(".blogPost");
 
 //get existing array of blog form
-const postArray = JSON.parse(localStorage.getItem("blogPosts")) || [];
+const postArray = JSON.parse(localStorage.getItem("blogPost")) || [];
 
 //checks array list
 if (postArray.length === 0){
@@ -20,7 +20,7 @@ if (postArray.length === 0){
           <h2 class="postTitle">${post.title}</h2>
           <p class="postContent">${post.content}</p>
         </div>
-        <p>Posted By: <span class="postUser">${post.userName}</span></p>
+        <p>Posted By: <span class="postUser">${post.username}</span></p>
       `;
   
       // appends the posts to the blog post section
